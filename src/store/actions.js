@@ -18,3 +18,7 @@ export const filterEpisodes = ({ commit }, payload) => {
 export const updateSearchFilter = ({ commit }, payload) => {
   commit(types.SEARCH_FILTER_UPDATE, payload)
 }
+
+export const clearFilters = ({ commit }) => {
+  commit(types.SEARCH_FILTER_CLEAR)
+}

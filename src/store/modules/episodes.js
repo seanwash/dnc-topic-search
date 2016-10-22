@@ -23,13 +23,10 @@ const mutations = {
   },
 
   [types.REQUEST_EPISODES_SUCCESS] (state, payload) {
-    console.log('REQUEST_EPISODES_SUCCESS', payload)
-
+    // Add all of the fetched episodes to the search index
     for (const episode of payload) {
       idx.add(episode)
     }
-
-    console.log(idx)
 
     state.episodes = payload
     state.requesting = false
@@ -43,6 +40,8 @@ const mutations = {
   },
 
   [types.FILTER_EPISODES] (state, payload) {
+    // Fire search query, map over results and filter all shows by
+    // returned IDs from index
     const results = idx.search(payload.keywords).map((result) => {
       return state.episodes.filter((episode) => {
         return episode.id === result.ref

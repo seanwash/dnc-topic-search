@@ -37,7 +37,7 @@ export default {
 
   computed: {
     formattedDate () {
-      return moment(this.episode.published_at).format('MMM Do YY')
+      return moment(this.episode.published_at).format('MMM Do YYYY')
     }
   }
 }
