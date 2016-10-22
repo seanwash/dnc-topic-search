@@ -1,5 +1,7 @@
 <template>
   <section class="mw9 center flex flex-wrap">
+    <loader v-if="requestingEpisodes"></loader>
+
     <episode
       v-for="episode in shownEpisodes"
       :episode="episode"
@@ -9,13 +11,15 @@
 
 <script>
 import { mapState, mapGetters } from 'vuex'
+import Loader from './Loader'
 import Episode from './Episode'
 
 export default {
   name: 'EpisodeList',
 
   components: {
-    Episode
+    Episode,
+    Loader
   },
 
   computed: {
@@ -25,7 +29,8 @@ export default {
     }),
 
     ...mapGetters([
-      'searchfilters'
+      'searchfilters',
+      'requestingEpisodes'
     ]),
 
     shownEpisodes () {
