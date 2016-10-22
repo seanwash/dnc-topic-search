@@ -1,6 +1,13 @@
-# Does Not Compute
+# Does Not Compute - Topic Search
 
-> A tool for quickily searching for tide levels
+> A quick and easy way to find DNC episodes that cover your favorite topics
+
+## Tech Used
+
+* Vue.js
+* Vuex
+* Lunr.js
+* Moment.js
 
 ## Build Setup
 
