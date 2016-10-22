@@ -1,22 +1,16 @@
 import * as types from '../mutation-types'
 
 const state = {
-  location: 'San Francisco'
+  keywords: ''
 }
 
 const mutations = {
   [types.SEARCH_FILTER_UPDATE] (state, payload) {
-    state = {
-      ...state,
-      location: payload
-    }
+    state.keywords = payload
   },
 
   [types.SEARCH_FILTER_CLEAR] (state) {
-    state = {
-      ...state,
-      location: ''
-    }
+    state.keywords = ''
   }
 }
 

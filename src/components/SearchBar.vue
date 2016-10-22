@@ -1,32 +1,43 @@
 <template>
-  <section class="mw7 center pv4">
-    <form @change="updateSearchFilter(searchFilters.location)" @submit.prevent="">
+  <section class="mw9 center pv4 ph2">
+    <form
+      @change="updateFilter"
+      @submit.prevent="submitForm"
+    >
       <input
-        class="db w-100 pa2"
+        class="db w-100 pa2 ba"
         type="text"
-        placeholder="Search by Location"
-        v-model="searchFilters.location"
+        placeholder="Search by Keyword"
+        :value="searchfilters.keywords"
       >
     </form>
   </section>
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 
 export default {
   name: 'SearchBar',
 
   computed: {
+    ...mapState({
+      searchfilters: state => state.searchfilters
+    }),
+
     ...mapGetters({
-      searchFilters: 'searchfilters'
+      searchfilters: 'searchfilters'
     })
   },
 
   methods: {
-    ...mapActions([
-      'updateSearchFilter'
-    ])
+    updateFilter (e) {
+      this.$store.dispatch('updateSearchFilter', e.target.value)
+    },
+
+    submitForm () {
+      this.$store.dispatch('filterEpisodes', this.searchfilters)
+    }
   }
 }
 </script>

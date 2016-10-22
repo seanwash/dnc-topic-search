@@ -1,4 +1,4 @@
-# quicktide
+# Does Not Compute
 
 > A tool for quickily searching for tide levels
 
@@ -25,3 +25,8 @@ npm test
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+https://api.simplecast.com/v1/podcasts/1386/episodes.json?api_key=sc_1BL-JpE96slFCZI-fFapsQ
+sc_1BL-JpE96slFCZI-fFapsQ
+1386
