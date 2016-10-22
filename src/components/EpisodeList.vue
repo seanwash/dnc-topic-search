@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 import Episode from './Episode'
 
 export default {
@@ -24,8 +24,12 @@ export default {
       filteredEpisodes: state => state.episodes.filteredEpisodes
     }),
 
+    ...mapGetters([
+      'searchfilters'
+    ]),
+
     shownEpisodes () {
-      if (this.filteredEpisodes.length) {
+      if (this.searchfilters.keywords !== '') {
         return this.filteredEpisodes
       } else {
         return this.episodes

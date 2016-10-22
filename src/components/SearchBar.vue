@@ -12,7 +12,7 @@
       >
 
       <div class="cf pt2">
-        <p class="f6 ma0 fl mt2">Showing {{ episodeCount }} {{ resultLabel }}</p>
+        <p class="f6 ma0 fl mt2">Showing {{ shownEpisodeCount }} {{ resultLabel }}</p>
         <button @click="clearFilters" class="pointer fr f6 link dim ph3 pv2 dib white bg-black bn" type="button">Clear Filters</button>
       </div>
     </form>
@@ -32,11 +32,11 @@ export default {
 
     ...mapGetters({
       searchfilters: 'searchfilters',
-      episodeCount: 'episodeCount'
+      shownEpisodeCount: 'shownEpisodeCount'
     }),
 
     resultLabel () {
-      return (this.episodeCount > 1) ? 'results' : 'result'
+      return (this.shownEpisodeCount >= 1 || this.shownEpisodeCount === 0) ? 'results' : 'result'
     }
   },
 
