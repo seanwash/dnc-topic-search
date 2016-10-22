@@ -8,3 +8,4 @@ selenium-debug.log
 typings
 typings.json
 secrets
+deploy.sh
