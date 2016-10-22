@@ -12,8 +12,8 @@
       "args": ["run", "dev"]
     },
     {
-      "taskName": "publish",
-      "args": ["run", "publish"]
+      "taskName": "deploy",
+      "args": ["run", "deploy"]
     },
     {
       "taskName": "test",
