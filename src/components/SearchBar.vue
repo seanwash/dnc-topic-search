@@ -7,7 +7,7 @@
       <input
         class="db w-100 pa2 ba"
         type="text"
-        placeholder="Search topics by Keyword"
+        placeholder="Search for topics by Keyword"
         :value="searchfilters.keywords"
       >
 
