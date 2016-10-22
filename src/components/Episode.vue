@@ -1,6 +1,6 @@
 <template>
   <article class="fl w-third pa2 flex">
-    <div class="ba b--black-10">
+    <div class="bg-white ba b--black-10">
       <div class="pv2 ph3">
         <h1 class="f6 ttu tracked">
           <a
