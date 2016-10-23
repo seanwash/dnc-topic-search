@@ -1,10 +1,10 @@
 <template>
   <section class="cf">
-    <div class="fl w-25 pr3">
-      <h2 class="f5 mv4 pt3 bt">Results</h2>
+    <div class="fl w-100 w-25-ns pr3-ns">
+      <h2 class="f5 mt4 pt3 bt">Results</h2>
     </div>
 
-    <div class="fl w-75 pl3">
+    <div class="fl w-100 w-75-ns pl3-ns">
       <loader v-if="requestingEpisodes"></loader>
 
       <div v-if="episodeErrors" class="pa2 tc w-100">
