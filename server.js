@@ -7,8 +7,8 @@ const server = new Hapi.Server()
 const https = require('https')
 
 const settings = {
-  host: 'localhost',
-  port: parseInt(process.env.PORT, 10)
+  host: process.env.HOST,
+  port: process.env.PORT
 }
 
 server.connection({
