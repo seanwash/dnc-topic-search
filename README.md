@@ -9,6 +9,10 @@
 * Lunr.js
 * Moment.js
 
+## Dev
+
+Run `$ npm run dev:be` to start the hapi.js server, and `$ npm run dev:fe` to start webpack and the dev server.
+
 ## Build Setup
 
 ``` bash
