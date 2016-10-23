@@ -1,1 +1,1 @@
-web: forever start server.js
+web: npm start
