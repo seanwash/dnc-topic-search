@@ -11,10 +11,13 @@
         <p>Looks like something broke :(</p>
       </div>
 
-      <episode
-        v-for="episode in shownEpisodes"
-        :episode="episode"
-      ></episode>
+      <transition-group name="fade" tag="div">
+        <episode
+          v-for="episode in shownEpisodes"
+          :episode="episode"
+          :key="episode.id"
+        ></episode>
+      </transition-group>
     </div>
   </section>
 </template>
@@ -54,3 +57,12 @@ export default {
   }
 }
 </script>
+
+<style>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 240ms ease-out
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
+</style>
