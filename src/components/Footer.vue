@@ -1,5 +1,5 @@
 <template>
-  <footer class="mw9 center ph2 mt4 f6">
+  <footer class="mw9 center mt4 f6">
     <div class="bt pv4">
       <a class="dib link black dim b tracked" href="/">Sean Washington</a>
 

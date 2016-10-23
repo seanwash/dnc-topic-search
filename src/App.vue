@@ -8,6 +8,8 @@
       <search-bar></search-bar>
 
       <episode-list></episode-list>
+
+      <app-footer></app-footer>
     </section>
   </div>
 </template>
