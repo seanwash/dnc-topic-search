@@ -8,7 +8,7 @@ const https = require('https')
 
 const settings = {
   host: 'localhost',
-  port: process.env.PORT
+  port: parseInt(process.env.PORT, 10)
 }
 
 server.connection({
@@ -36,7 +36,7 @@ server.route({
           return reply(parsed)
         } catch (err) {
           console.error('Unable to parse response as JSON', err)
-          return reply(body)
+          return reply(err)
         }
       })
     })
