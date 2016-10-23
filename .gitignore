@@ -9,3 +9,4 @@ typings
 typings.json
 secrets
 deploy.sh
+.env
