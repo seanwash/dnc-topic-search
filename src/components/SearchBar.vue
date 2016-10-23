@@ -30,7 +30,7 @@
 
           <button
             @click="clearFilters"
-            class="pointer fr f6 dim dib black bg-transparent bn"
+            class="pointer fr f6 dim dib black bg-transparent bn pa0"
             type="button">
             Clear Filters
           </button>
