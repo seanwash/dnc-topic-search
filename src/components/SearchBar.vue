@@ -1,21 +1,35 @@
 <template>
-  <section class="mw9 center pt2 pb3 ph2">
-    <form
-      @change="updateFilter"
-      @submit.prevent="submitForm"
-    >
-      <input
-        class="db w-100 pa2 ba"
-        type="text"
-        placeholder="Search for topics by Keyword"
-        :value="searchfilters.keywords"
-      >
+  <section class="cf mt2 mb4">
+    <div class="fl w-25 pr3">
+      <h2 class="f5 ma0 pt3 bt">Search</h2>
+    </div>
 
-      <div class="cf pt2">
-        <p class="f6 ma0 fl mt2">Showing {{ shownEpisodeCount }} {{ resultLabel }}</p>
-        <button @click="clearFilters" class="pointer fr f6 link dim ph3 pv2 dib white bg-black bn" type="button">Clear Filters</button>
-      </div>
-    </form>
+    <div class="fl w-75 pl3">
+      <form
+        @change="updateFilter"
+        @submit.prevent="submitForm"
+      >
+        <div class="flex bt bb">
+          <input
+            class="db w-100 bg-transparent bn pv3"
+            type="text"
+            placeholder="Type here to search the Does Not Compute archive"
+            :value="searchfilters.keywords"
+          >
+
+          <input
+            type="submit"
+            value="Search Archive"
+            class="black dim bn bg-transparent pointer"
+          >
+        </div>
+
+        <div class="cf pt2">
+          <p class="f6 ma0 fl">Showing {{ shownEpisodeCount }} {{ resultLabel }}</p>
+          <button @click="clearFilters" class="pointer fr f6 dim dib black bg-transparent bn" type="button">Clear Filters</button>
+        </div>
+      </form>
+    </div>
   </section>
 </template>
 

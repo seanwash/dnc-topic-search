@@ -1,14 +1,20 @@
 <template>
-  <section class="mw9 center flex flex-wrap">
-    <loader v-if="requestingEpisodes"></loader>
+  <section class="cf">
+    <div class="fl w-25 pr3">
+      <h2 class="f5 mv4 pt3 bt">Results</h2>
+    </div>
 
-    <episode
-      v-for="episode in shownEpisodes"
-      :episode="episode"
-    ></episode>
+    <div class="fl w-75 pl3">
+      <loader v-if="requestingEpisodes"></loader>
 
-    <div v-if="episodeErrors" class="pa2 tc w-100">
-      <p>Looks like something broke :(</p>
+      <div v-if="episodeErrors" class="pa2 tc w-100">
+        <p>Looks like something broke :(</p>
+      </div>
+
+      <episode
+        v-for="episode in shownEpisodes"
+        :episode="episode"
+      ></episode>
     </div>
   </section>
 </template>

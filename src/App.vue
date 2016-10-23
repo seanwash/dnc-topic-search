@@ -1,12 +1,14 @@
 <template>
-  <div id="app">
-    <app-header></app-header>
+  <div id="app" class="mw9 center">
+    <div class="w-20 fl center ph2">
+      <app-header></app-header>
+    </div>
 
-    <search-bar></search-bar>
+    <section class="w-80 fl ph2">
+      <search-bar></search-bar>
 
-    <episode-list></episode-list>
-
-    <app-footer></app-footer>
+      <episode-list></episode-list>
+    </section>
   </div>
 </template>
 

@@ -1,23 +1,31 @@
 <template>
-  <article class="fl w-third pa2 flex">
-    <div class="bg-white ba b--black-10">
-      <div class="pv2 ph3">
-        <h1 class="f6 ttu tracked">
+  <article class="pv4">
+    <div class="bt pt3 cf">
+
+      <div class="fl w-third pr2">
+        <h1 class="ma0 f5 ttu lh-title">
           <a
             class="link dim black"
-            :href="`https://spec.fm/podcasts/does-not-compute/${episode.id}`"
-          >
+            :href="episodeLink">
             {{ episode.title }}
           </a>
         </h1>
+
+        <p class="gray db pv2 f6 lh-solid">Published <time>{{ formattedDate }}</time></p>
+
+        <a
+          :href="episodeLink"
+          class="link dim black f6 lh-solid">
+          Listen to this Episode
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="10" height="10" fill="#000" stroke="currentcolor" stroke-width="3" class="ml1" style="display: inline-block; vertical-align: middle; overflow: visible;"><path d="M3 1.5 L3 14.5 L14.258330249197702 8 z"></path></svg>
+        </a>
       </div>
 
-      <img :src="episode.images.large" class="w-100 db">
-
-      <div class="pa3">
-        <p class="lh-title">{{ episode.description }}</p>
-        <small class="tracked gray db pv2">Published <time>{{ formattedDate }}</time></small>
+      <div class="fl w-two-thirds pl2">
+        <p class="ma0 lh-copy">{{ episode.description }}</p>
       </div>
+
     </div>
   </article>
 </template>
@@ -38,6 +46,10 @@ export default {
   computed: {
     formattedDate () {
       return moment(this.episode.published_at).format('MMM Do YYYY')
+    },
+
+    episodeLink () {
+      return `https://spec.fm/podcasts/does-not-compute/${this.episode.id}`
     }
   }
 }

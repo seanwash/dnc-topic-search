@@ -1,6 +1,13 @@
 <template>
-  <header class="mw9 center ph2">
-    <h1 class="black b f4 f3-ns dib mr3">Does Not Compute</h1>
+  <header>
+    <h1 class="ma0 mt2 black b f4 f3-ns dib mr3">
+      <a
+        class="link dim black"
+        href="https://spec.fm/podcasts/does-not-compute"
+      >
+        Does<br />Not<br />Compu<br />te
+      </a>
+    </h1>
   </header>
 </template>
 
