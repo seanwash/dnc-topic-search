@@ -1,8 +1,11 @@
-import data from './data'
+import Vue from 'vue'
 
 export default {
   getEpisodeData (cb, errorCb) {
-    // TODO: Implement real API call with success and failure
-    return cb(data)
+    Vue.http.get(process.env.API_URL).then((response) => {
+      return cb(response.body)
+    }, (response) => {
+      return errorCb(response.body)
+    })
   }
 }
