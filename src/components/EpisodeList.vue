@@ -6,6 +6,10 @@
       v-for="episode in shownEpisodes"
       :episode="episode"
     ></episode>
+
+    <div v-if="episodeErrors" class="pa2 tc w-100">
+      <p>Looks like something broke :(</p>
+    </div>
   </section>
 </template>
 
@@ -30,7 +34,8 @@ export default {
 
     ...mapGetters([
       'searchfilters',
-      'requestingEpisodes'
+      'requestingEpisodes',
+      'episodeErrors'
     ]),
 
     shownEpisodes () {

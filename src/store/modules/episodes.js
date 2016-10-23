@@ -31,12 +31,13 @@ const mutations = {
     state.episodes = payload
     state.requesting = false
     state.requested = true
+    state.errors = null
   },
 
   [types.REQUEST_EPISODES_FAILURE] (state, payload) {
     state.requesting = false
     state.requested = true
-    state.errors = payload.errors
+    state.errors = payload
   },
 
   [types.FILTER_EPISODES] (state, payload) {
