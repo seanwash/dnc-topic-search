@@ -1,10 +1,10 @@
 <template>
   <div id="app" class="mw9 center">
-    <div class="w-20 fl center ph2 mt4-ns">
+    <div class="w-20 fl center ph2 mt5-ns">
       <app-header></app-header>
     </div>
 
-    <section class="w-80 fl ph2 mt4-ns">
+    <section class="w-80 fl ph2 mt5-ns">
       <search-bar></search-bar>
 
       <episode-list></episode-list>

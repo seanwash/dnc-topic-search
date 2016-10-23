@@ -9,18 +9,19 @@
         @change="updateFilter"
         @submit.prevent="submitForm"
       >
-        <div class="flex bt bb">
+        <div class="flex bt bb bg-white">
           <input
-            class="db w-100 bg-transparent bn pv3"
+            class="db w-100 bg-transparent bn pv3 ph2"
             type="text"
             placeholder="Type here to search the Does Not Compute archive"
+            autofocus
             :value="searchfilters.keywords"
           >
 
           <input
             type="submit"
             value="Search Archive"
-            class="black dim bn bg-transparent pointer"
+            class="black dim bn bg-transparent pointer ph2 fw7"
           >
         </div>
 
