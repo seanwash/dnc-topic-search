@@ -1,5 +1,5 @@
 <template>
-  <section class="cf mt2 mb4">
+  <section class="cf mb4">
     <div class="fl w-25 pr3">
       <h2 class="f5 ma0 pt3 bt">Search</h2>
     </div>
