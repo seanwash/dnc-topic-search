@@ -69,6 +69,7 @@ export default {
 
     updateFilter (e) {
       this.$store.dispatch('updateSearchFilter', e.target.value)
+      this.submitForm()
     },
 
     submitForm () {
