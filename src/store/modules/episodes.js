@@ -23,16 +23,16 @@ const mutations = {
   },
 
   [types.REQUEST_EPISODES_SUCCESS] (state, payload) {
-    payload = payload.filter((episode) => {
-      return episode.published
-    })
+    // payload = payload.data.filter((episode) => {
+    //   return episode.published
+    // })
 
     // Add all of the fetched episodes to the search index
-    for (const episode of payload) {
+    for (const episode of payload.data) {
       idx.add(episode)
     }
 
-    state.episodes = payload
+    state.episodes = payload.data
     state.requesting = false
     state.requested = true
     state.errors = null
