@@ -6,6 +6,7 @@
         <h1 class="ma0 f5 ttu lh-title">
           <a
             class="link dim black"
+            target="_blank"
             :href="episodeLink">
             {{ episode.title }}
           </a>
@@ -15,6 +16,7 @@
 
         <a
           :href="episodeLink"
+          target="_blank"
           class="link dim black f6 lh-solid fw7">
           Listen here
 
@@ -49,7 +51,8 @@ export default {
     },
 
     episodeLink () {
-      return `https://spec.fm/podcasts/does-not-compute/${this.episode.id}`
+      return this.episode.sharing_url
+      // return `https://spec.fm/podcasts/does-not-compute/${this.episode.id}`
     }
   }
 }
